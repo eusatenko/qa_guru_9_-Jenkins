@@ -17,6 +17,8 @@ public class CheckFormTests {
     @BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
+        Configuration.remote = "https://eusatenko:Rhfcyjpyfvtycr95@selenoid.autotests.cloud/wd/hub/";
+
     }
 
     //проверяем только обязательные поля
