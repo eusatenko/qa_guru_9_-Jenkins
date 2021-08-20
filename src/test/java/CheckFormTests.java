@@ -17,7 +17,7 @@ public class CheckFormTests {
     @BeforeAll
     static void setup() {
         Configuration.startMaximized = true;
-        Configuration.remote = "https://eusatenko:Rhfcyjpyfvtycr95@selenoid.autotests.cloud/wd/hub/";
+        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
 
     }
 
