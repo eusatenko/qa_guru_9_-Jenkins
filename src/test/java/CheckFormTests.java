@@ -9,7 +9,7 @@ import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
 
-public class CheckFormTests {
+public class CheckFormTests extends TestBase {
 
     @BeforeAll
     static void setup() {
@@ -74,6 +74,7 @@ public class CheckFormTests {
         });
 
         //проверки
+        step("Проверка введённых данных", () -> {
         $("tbody").$(byText("Student Name")).parent().shouldHave(text(name + " " + lastName));
         $("tbody").$(byText("Student Email")).parent().shouldHave(text(email));
         $("tbody").$(byText("Gender")).parent().shouldHave(text(gender));
@@ -84,6 +85,6 @@ public class CheckFormTests {
         $("tbody").$(byText("Picture")).parent().shouldHave(text("pic.jpg"));
         $("tbody").$(byText("Address")).parent().shouldHave(text("street Test"));
         $("tbody").$(byText("State and City")).parent().shouldHave(text("NCR Delhi"));
-
+        });
     }
 }
