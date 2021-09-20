@@ -11,13 +11,6 @@ import static io.qameta.allure.Allure.step;
 
 public class CheckFormTests extends TestBase {
 
-    @BeforeAll
-    static void setup() {
-        Configuration.startMaximized = true;
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
-
-    }
-
     //проверяем все поля
     @Test
     void positiveAllRequiredFieldsTest() {
